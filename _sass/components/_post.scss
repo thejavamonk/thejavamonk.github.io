@@ -1,0 +1,53 @@
+.post-list {
+	@extend %clearfix;
+	list-style: none;
+}
+
+.post {
+	float:left;
+	width: 50%;
+	padding: 0 3em 1em;
+
+	&:nth-child(odd){
+		clear:both;
+	}
+}
+
+.post-read-more-link {
+	text-align: center;
+}
+
+.post-tags {
+	margin-left: 0;
+	min-height: 50px;
+	text-align: center;
+
+	li {
+		display: inline; 
+	}
+}
+
+// adding styles for our single posts page
+
+.post-header{
+	text-align: center;
+}
+
+.post-title {
+	margin: 0;
+}
+
+.post-meta{
+	color: $blue-color;
+	font-size: $h4-font-size;
+}
+
+.post-body{
+	width: 90%;
+	margin: $h2-font-size;
+
+	h1, h2, h3, h4 {
+		max-width: 80%;
+		margin: $h2-font-size auto;
+	}
+}
