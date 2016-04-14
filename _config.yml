@@ -12,7 +12,7 @@ email: r.praveen88@rediffmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Full stack Java Developer with experience working on Java, JEE web applications and other
   open source frameworks like JSF, Hibernate, Spring.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/thejavamonk.github.io" # the subpath of your site, e.g. /blog
 url: "http://thejavamonk.github.io" # the base hostname & protocol for your site
 twitter_username: thejavamonk24
 github_username:  thejavamonk
