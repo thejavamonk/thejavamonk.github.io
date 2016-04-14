@@ -1,0 +1,23 @@
+.project-list {
+	@extend %clearfix;
+	padding: 0;
+	list-style: none;
+}
+
+.project {
+	float: left;
+	width: 33.33%;
+	padding: 0 1em;
+}
+
+.project-caption {
+	margin-top: 0.5em;
+	font-size: $h3-font-size;
+	text-align: center;
+}
+
+.project-image {
+	height: "200";
+	width: "200";
+	align: center;
+}

@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Mobilio: car pooling"
+date:   2016-02-21 17:48:44 +0530
+categories: project
+featured_image: "/images/carpool-icon.png"
+---
+
+## Mobilio: a car pooling app
+
+Mobilio is a open-source car pooling app. It mainly has two components i.e a server side app built using Java, JEE tech stack and an android app (UI). The web app is written on the Java stack using technologies and frameworks like Bootstrap, Java 8, Spring 4.2, JPA 2.0, MySQL database.
+
+The source code and deployment instructions for the app can be found at:
+
+1. Java web app [mobilio web git url](https://github.com/codepreplabs/mobilioweb).
+
+2. The android app [mobilio android git url](https://github.com/codepreplabs/mobilioAndroid)
+
+ 
