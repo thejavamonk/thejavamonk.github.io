@@ -57,12 +57,14 @@
 }
 
 .project-image{
-    align: center;
+    display: table; 
     height: 200px;
     width: 200px;
+    float:none;
 }
 
 .project-caption{
-    align: center;
-
+    display: table-caption;
+    caption-side:top;
+    clear:both;
 }

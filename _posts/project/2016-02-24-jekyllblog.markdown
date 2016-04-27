@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Personal blog using jekyll"
+title:  "portfolio"
 date:   2016-02-21 17:48:44 +0530
 categories: project
 featured_image: "/images/jekyll.png"

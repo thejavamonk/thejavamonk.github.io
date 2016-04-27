@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mobilio: car pooling"
+title:  "Mobilio"
 date:   2016-02-21 17:48:44 +0530
 categories: project
 featured_image: "/images/carpool-icon.png"
