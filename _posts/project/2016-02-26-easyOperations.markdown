@@ -10,4 +10,4 @@ featured_image: "/images/ERP.png"
 
 It is a open source CMS and ERP solution, developed using JavaFX, Java 8, JPA 2.2 and MySQL database.
 
-the source for easyOperations can be found at [easyOperations web git url](https://github.com/codepreplabs/easyOperations).
+the source for easyOperations can be found at [easyOperations](https://github.com/codepreplabs/easyOperations).
