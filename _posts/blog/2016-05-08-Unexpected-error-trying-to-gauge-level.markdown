@@ -6,7 +6,7 @@ categories: blog
 tags: java
 ---
 
-The root cause seems to be the loading  of ALL META DATA, including comments beside sql columns and various other constructs. This feature is true by default and needs to be explicitly set to false by adding the below config in hibernate.cfg.xml or persistance.xml.
+The root cause seems to be the loading  of meta data like comments, sql columns and various other constructs. This feature is true by default and needs to be explicitly set to false by adding the below config in hibernate.cfg.xml or persistance.xml.
 
 {% highlight xml %}
 <property name="hibernate.jdbc.use_get_generated_keys" value="true" />
