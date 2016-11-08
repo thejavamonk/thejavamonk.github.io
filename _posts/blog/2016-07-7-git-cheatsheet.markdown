@@ -35,3 +35,7 @@ Do the merge, and then pull the stash:
 {% highlight unix %}
 git stash pop
 {% endhighlight %}
+
+**error: You have not concluded your merge (MERGE_HEAD exists).**
+
+Check status (git status) of your repository. Every unmerged file (after you resolve conficts by yourself) should be added (git add), and if there is no unmerged file you should git commit
