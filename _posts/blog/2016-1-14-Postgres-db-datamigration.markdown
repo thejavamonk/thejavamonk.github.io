@@ -10,19 +10,19 @@ Steps to perform a postgres db data migration
 
 1. Create the backup:
 
-{% highlight sql %}
+{% highlight psql %}
 pg_dump mydb > db.sql
 {% endhighlight %}
 
 Copy db.sql to the new server (specific command depends on OS). Go to the new server
 
-{% highlight sql %}
+{% highlight psql %}
 createdb mydb -E UTF8 (you don't have to specify UTF8 encoding, but I always do)
 {% endhighlight %}
 
 Then:
 
-{% highlight sql %}
+{% highlight psql %}
 psql -d mydb -f db.sql
 {% endhighlight %}
 
