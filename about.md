@@ -10,4 +10,4 @@ I am a full stack Java Developer proficient in working with open source java fra
 
 This is my blog where i discuss all the latest projects that i am contributing to and technologies that i am learning.
 
-You can find more information about me at my [StackOverflow Careers](http://stackoverflow.com/cv/praveen-kumar-186552) page.
+You can find more information about me here <a href="resume.pdf">resume</a> and my [StackOverflow Careers](http://stackoverflow.com/cv/praveen-kumar-186552) page.
