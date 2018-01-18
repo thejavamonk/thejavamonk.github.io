@@ -3,7 +3,7 @@ layout: post
 title:  "postgres cheatsheet"
 date:   2017-01-15
 categories: blog
-tags: postgres
+tags: java
 ---
 
 <div>
