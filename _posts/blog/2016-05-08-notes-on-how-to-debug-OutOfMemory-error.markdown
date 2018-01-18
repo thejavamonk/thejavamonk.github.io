@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "debug OutOfMemory"
+title:  "OutOfMemory"
 date:   2016-05-08
 categories: blog
 tags: java
