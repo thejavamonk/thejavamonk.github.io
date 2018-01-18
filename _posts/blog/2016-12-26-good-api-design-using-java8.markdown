@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "API design check list using Java 8"
+title:  "API design Java"
 date:   2016-12-26
 categories: blog
 tags: java

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes on how to debug OutOfMemory error"
+title:  "debug OutOfMemory"
 date:   2016-05-08
 categories: blog
 tags: java
