@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git cheat sheet"
+title:  "Git cheatsheet"
 date:   2016-05-09
 categories: blog
 tags: java
