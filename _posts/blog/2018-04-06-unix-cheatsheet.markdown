@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Unix cheatsheet"
+title:  "Unix cmd"
 date:   2016-12-26
 categories: blog
 tags: java
