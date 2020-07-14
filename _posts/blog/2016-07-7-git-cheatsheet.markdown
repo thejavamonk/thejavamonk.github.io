@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git cmd"
+title:  "git cheat"
 date:   2016-05-09
 categories: blog
 tags: java
