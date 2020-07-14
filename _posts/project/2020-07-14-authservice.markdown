@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Auth-Service"
+title:  "authService"
 date:   2020-07-14 17:48:44 +0530
 categories: project
 featured_image: "/images/spring/springBootAndSecurity.png"
