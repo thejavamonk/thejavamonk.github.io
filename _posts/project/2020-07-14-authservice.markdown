@@ -3,7 +3,7 @@ layout: post
 title:  "authService"
 date:   2020-07-14 17:48:44 +0530
 categories: project
-featured_image: "/images/spring/springsecurity.jpeg"
+featured_image: "/images/spring/springsecurity.png"
 ---
 
 ## Auth-Service: user-management micro-service using spring framework
