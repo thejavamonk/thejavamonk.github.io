@@ -6,7 +6,7 @@ permalink: /about/
 
 Hi, I am Praveen (thejavamonk), I am a self-taught software developer with 7+ years of experience working on various web based client server and distributed web applications currently working at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/).
 
-I am proficient in working with open source java frameworks such as Spring Framework, JSF, Hibernate, Spring RESTful and front end development using HTML5, CSS3, JavaScript libraries like Node.js.
+I am proficient in working with open source java frameworks such as Spring Framework, JPA, Hibernate, Spring RESTful and front end development using HTML5, CSS3, JavaScript.
 
 This is my blog where I write on my latest projects and learnings.
 
