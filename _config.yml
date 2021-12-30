@@ -9,10 +9,11 @@
 title: portfolio
 titleForhead: portfolio
 email: thejavamonk@gmail.com
-description: "Software Developer with experience working on Java, JEE web applications and other
-  open source frameworks like JSF, Hibernate, Spring."
-baseurl: "/thejavamonk.github.io" # the subpath of your site, e.g. /blog
-url: "http://thejavamonk.github.io" # the base hostname & protocol for your site
+description:
+  'Software Developer with experience working on Java, JEE web applications and other
+  open source frameworks like JSF, Hibernate, Spring.'
+baseurl: 'http://thejavamonk.github.io' # the subpath of your site, e.g. /blog
+url: 'http://thejavamonk.github.io' # the base hostname & protocol for your site
 twitter_username: thejavamonk24
 github_username: thejavamonk
 google_username: thejavamonk
@@ -20,13 +21,13 @@ google_username: thejavamonk
 permalink: /:categories/:title
 
 links:
-- title: about
-  url: /about
-- title: projects
-  url: /projects
-- title: articles
-  url: /articles
-  
+  - title: about
+    url: /about
+  - title: projects
+    url: /projects
+  - title: articles
+    url: /articles
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
