@@ -12,8 +12,8 @@ email: thejavamonk@gmail.com
 description:
   'Software Developer with experience working on Java, JEE web applications and other
   open source frameworks like JSF, Hibernate, Spring.'
-baseurl: 'http://thejavamonk.github.io' # the subpath of your site, e.g. /blog
-url: 'http://thejavamonk.github.io' # the base hostname & protocol for your site
+baseurl: 'https://thejavamonk.github.io' # the subpath of your site, e.g. /blog
+url: 'https://thejavamonk.github.io' # the base hostname & protocol for your site
 twitter_username: thejavamonk24
 github_username: thejavamonk
 google_username: thejavamonk
