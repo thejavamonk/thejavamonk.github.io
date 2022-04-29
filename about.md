@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I am Praveen Kumar R (thejavamonk), I am a self-taught software developer with 8+ years of experience working on various web based client server and distributed web applications, currently working at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/).
+Hi, I am Praveen Kumar R (thejavamonk), a self-taught software developer with 8+ years of experience working on various web based client server and distributed web applications, currently working at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/).
 
 I am proficient in working with open source java frameworks such as Spring Framework, JPA, Hibernate, Spring RESTful and front end development using HTML5, CSS3, JavaScript, Bootstrap and React.
 
