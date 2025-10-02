@@ -3,7 +3,7 @@ layout: post
 title:  "git cheat"
 date:   2016-05-09
 categories: blog
-tags: java
+tags: git
 ---
 
 **how to pull from remote git repository and override the changes in my local repository**
