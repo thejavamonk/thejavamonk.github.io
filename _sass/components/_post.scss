@@ -1,53 +1,224 @@
 .post-list {
-	@extend %clearfix;
-	list-style: none;
+    @extend %clearfix;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0;
+}
+
+.post-list-home {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
 .post {
-	float:left;
-	width: 50%;
-	padding: 0 3em 1em;
+    float: none;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 
-	&:nth-child(odd){
-		clear:both;
-	}
+    &:nth-child(odd) {
+        clear: none;
+    }
+
+    background: white;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 5px 10px rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px);
+        border-color: $brand-light;
+    }
+
+    a {
+        color: $brand-color;
+
+        &:hover {
+            color: $brand-dark;
+        }
+    }
+
+    h2 {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 2px;
+        padding: 0 12px 0 12px;
+        font-size: $h3-font-size;
+    }
+
+    p {
+        padding: 4px 12px;
+        color: $text-light;
+        line-height: 1.7;
+        flex-grow: 1;
+        margin-bottom: 4px;
+    }
 }
 
 .post-read-more-link {
-	text-align: center;
+    text-align: left;
+    padding: 4px 12px 8px 12px;
+    margin-top: auto;
+
+    a {
+        display: inline-block;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, $brand-color, $brand-dark);
+        color: white;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border: none;
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.4);
+            transform: translateX(4px);
+        }
+    }
 }
 
 .post-tags {
-	margin-left: 0;
-	min-height: 50px;
-	text-align: center;
+    margin-left: 0;
+    margin-top: 0;
+    min-height: 0;
+    text-align: left;
+    padding: 4px 12px 2px 12px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
 
-	li {
-		display: inline; 
-	}
+    li {
+        display: inline-block;
+        background: $brand-light;
+        color: $brand-dark;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 500;
+    }
 }
 
-// adding styles for our single posts page
+.post-meta-info {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9em;
+    color: $text-light;
+    padding: 2px 12px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
 
-.post-header{
-	text-align: center;
+    span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+// Single post page styles
+.post-header {
+    text-align: left;
+    padding: $spacing-unit * 2 0;
+    border-bottom: 2px solid $border-color;
+    margin-bottom: $spacing-unit * 2;
+
+    h1 {
+        text-align: left;
+        margin: 0;
+    }
 }
 
 .post-title {
-	margin: 0;
+    margin: 0 0 $spacing-unit / 2 0;
+    text-align: left;
 }
 
-.post-meta{
-	color: $blue-color;
-	font-size: $h4-font-size;
+.post-meta {
+    color: $text-light;
+    font-size: 0.95em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-.post-body{
-	width: 90%;
-	margin: $h2-font-size;
+.post-body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
 
-	h1, h2, h3, h4 {
-		max-width: 80%;
-		margin: $h2-font-size auto;
-	}
+    h1, h2, h3, h4 {
+        max-width: 100%;
+        margin: $spacing-unit * 1.5 0 $spacing-unit 0;
+        text-align: left;
+    }
+
+    p, ul, ol {
+        line-height: 1.8;
+        margin-bottom: $spacing-unit / 1.5;
+    }
+}
+
+// Responsive Design
+@include media-query($on-laptop) {
+    .post-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: $spacing-unit;
+    }
+
+    .post h2 {
+        font-size: $h4-font-size;
+        padding: $spacing-unit / 1.5 $spacing-unit 0 $spacing-unit;
+    }
+
+    .post-body {
+        padding: 0 $spacing-unit / 2;
+    }
+}
+
+@include media-query($on-palm) {
+    .post-list {
+        grid-template-columns: 1fr;
+        gap: $spacing-unit * 1.2;
+    }
+
+    .post-header {
+        padding: $spacing-unit 0;
+    }
+
+    .post h2 {
+        font-size: $h4-font-size;
+        padding: $spacing-unit / 1.5;
+    }
+
+    .post p {
+        padding: 0 $spacing-unit / 1.5;
+        font-size: 0.95em;
+    }
+
+    .post-read-more-link {
+        padding: $spacing-unit / 2 $spacing-unit / 1.5 $spacing-unit / 1.5;
+    }
+
+    .post-tags {
+        padding: $spacing-unit / 3 $spacing-unit / 1.5 0;
+        gap: $spacing-unit / 4;
+    }
+
+    .post-meta-info {
+        padding: 0 $spacing-unit / 1.5;
+        font-size: 0.85em;
+        gap: $spacing-unit / 4;
+    }
+
+    .post-body {
+        padding: 0 $spacing-unit / 2;
+    }
+
+    .post-body h1, .post-body h2, .post-body h3, .post-body h4 {
+        margin: $spacing-unit 0 $spacing-unit / 2 0;
+    }
 }

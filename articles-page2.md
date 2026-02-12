@@ -1,18 +1,13 @@
 ---
 layout: page
 title: List of Articles
-permalink: /articles/
+permalink: /articles/page2/
 ---
 
 <div class="site-section site-section-last">
 	{% assign blog_posts = site.posts | where: "categories", "blog" %}
 	{% assign posts_per_page = 5 %}
-	{% assign page_param = page.url | split: 'page' | last | split: '/' | first %}
-	{% if page_param == '' %}
-		{% assign current_page = 1 %}
-	{% else %}
-		{% assign current_page = page_param | plus: 0 %}
-	{% endif %}
+	{% assign current_page = 2 %}
 	
 	{% assign offset = current_page | minus: 1 | times: posts_per_page %}
 	{% assign total_posts = blog_posts | size %}
