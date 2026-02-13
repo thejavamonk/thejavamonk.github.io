@@ -4,10 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Hi, I am Praveen (thejavamonk), I am a self-taught software developer with 7+ years of experience working on various web based client server and distributed web applications currently working at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/).
+Hi, I’m Praveen.
 
-I am proficient in working with open source java frameworks such as Spring Framework, JPA, Hibernate, Spring RESTful and front end development using HTML5, CSS3, JavaScript.
+I’m a self-taught software developer with over 12 years of experience building web-based, client-server, and distributed applications. Currently, I work as a Senior Technical Lead at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/), where I design and develop scalable backend systems and modern web solutions.
 
-This is my blog where I write on my latest projects and learnings.
+I specialize in Java and open-source frameworks such as Spring, Micronaut, Netflix DGS (GraphQL), JPA, and Hibernate. On the frontend side, I’m proficient in HTML5, CSS3, JavaScript, Bootstrap, and React, enabling me to deliver full-stack solutions end-to-end.
 
-You can find more information about me here [resume](https://github.com/thejavamonk/thejavamonk.github.io/raw/master/resources/PraveenKumar.pdf) and my [StackOverflow Careers](http://stackoverflow.com/cv/praveen-kumar-186552) page.
+Beyond professional work, I have a strong passion for Artificial Intelligence and Machine Learning, and I actively explore how these technologies can shape the future of software development.
+
+I also share my projects, experiments, and learnings on my blog. 
+
+For more details about my work and experience, you can check out my [resume](https://github.com/thejavamonk/thejavamonk.github.io/raw/master/resources/PraveenKumar.pdf).

@@ -1,10 +1,19 @@
 <li class="project">
-	<a href="{{ site.baseurl }}/{{ project.url }}" align="center">
-		<figure>
-			<img class="project-image" src="{{ site.baseurl }}{{ project.featured_image }}" alt="Thumbnail for {{ project.title }}">
-			<figcaption class="project-caption">
-				{{ project.title }}
-			</figcaption>
-		</figure>
-	</a>
+    <a href="{{ project.url | prepend: site.baseurl }}" class="project-link">
+        <div class="project-image-wrapper">
+            <img class="project-image" src="{{ site.baseurl }}{{ project.featured_image }}" alt="Thumbnail for {{ project.title }}">
+            <div class="project-overlay">
+                <div class="overlay-content">
+                    <span class="view-project-btn">View Project →</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-excerpt">{{ project.content | strip_html | truncate: 120 }}</p>
+            <div class="project-meta">
+                <span class="project-date">{{ project.date | date: "%Y" }}</span>
+            </div>
+        </div>
+    </a>
 </li>
