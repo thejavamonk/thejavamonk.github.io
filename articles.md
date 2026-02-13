@@ -2,28 +2,16 @@
 layout: page
 title: List of Articles
 permalink: /articles/
+pagination:
+  enabled: true
+  collection: posts
+  category: blog
+  per_page: 5
 ---
 
 <div class="site-section site-section-last">
-	{% assign blog_posts = site.posts | where: "categories", "blog" %}
-	{% assign posts_per_page = 5 %}
-	{% assign page_param = page.url | split: 'page' | last | split: '/' | first %}
-	{% if page_param == '' %}
-		{% assign current_page = 1 %}
-	{% else %}
-		{% assign current_page = page_param | plus: 0 %}
-	{% endif %}
-	
-	{% assign offset = current_page | minus: 1 | times: posts_per_page %}
-	{% assign total_posts = blog_posts | size %}
-	{% assign total_pages = total_posts | divided_by: posts_per_page %}
-	{% assign remainder = total_posts | modulo: posts_per_page %}
-	{% if remainder != 0 %}
-		{% assign total_pages = total_pages | plus: 1 %}
-	{% endif %}
-	
 	<ul class="post-list">
-		{% for post in blog_posts limit: posts_per_page offset: offset %}
+		{% for post in paginator.posts %}
 		<li class="post">
 			{% include post.html %}
 		</li>
@@ -31,23 +19,21 @@ permalink: /articles/
 	</ul>
 	
 	<!-- Pagination -->
+	{% if paginator.total_pages > 1 %}
 	<div class="pagination">
-		{% if current_page > 1 %}
-			{% if current_page == 2 %}
-				<a href="/articles/" class="pagination-link">&larr; Previous</a>
-			{% else %}
-				<a href="/articles/page{{ current_page | minus: 1 }}/" class="pagination-link">&larr; Previous</a>
-			{% endif %}
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-link">&larr; Previous</a>
 		{% else %}
 			<span class="pagination-link-disabled">&larr; Previous</span>
 		{% endif %}
 		
-		<span class="pagination-info">Page {{ current_page }} of {{ total_pages }}</span>
+		<span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 		
-		{% if current_page < total_pages %}
-			<a href="/articles/page{{ current_page | plus: 1 }}/" class="pagination-link">Next &rarr;</a>
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-link">Next &rarr;</a>
 		{% else %}
 			<span class="pagination-link-disabled">Next &rarr;</span>
 		{% endif %}
 	</div>
+	{% endif %}
 </div>

@@ -30,3 +30,17 @@ links:
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Pagination settings
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
