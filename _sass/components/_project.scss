@@ -52,7 +52,8 @@
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 18px;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -109,6 +110,8 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .project-title {
@@ -118,6 +121,7 @@
     color: $brand-color;
     letter-spacing: -0.3px;
     transition: color 0.3s ease;
+    text-align: center;
 }
 
 .project-link:hover .project-title {
@@ -125,21 +129,14 @@
 }
 
 .project-excerpt {
-    color: $text-light;
-    font-size: 0.95em;
-    line-height: 1.6;
-    margin: 0 0 $spacing-unit / 2 0;
-    flex-grow: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: none;
 }
 
 .project-meta {
     display: flex;
     gap: $spacing-unit / 2;
     align-items: center;
+    justify-content: center;
     padding-top: $spacing-unit / 2;
     border-top: 1px solid $border-color;
     margin-top: auto;

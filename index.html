@@ -20,7 +20,7 @@ layout: default
 <section class="site-section site-section-last">  
   <div class="wrapper"> 
       <h1>my projects</h1>
-        <ul class="project-list project-list-home">
+        <ul class="project-list">
           {% for project in site.categories['project'] reversed limit:2 %} 
           {% include project.html %}
           {% endfor %}
