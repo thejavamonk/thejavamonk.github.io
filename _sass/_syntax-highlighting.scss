@@ -5,8 +5,11 @@
     background: $grey-color-dark;
     color: #e2e8f0;
     @extend %vertical-rhythm;
-    border-radius: 6px;
+    border-radius: 8px;
     overflow-x: auto;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    margin: $spacing-unit 0;
 
     .highlighter-rouge & {
         background: $grey-color-dark;

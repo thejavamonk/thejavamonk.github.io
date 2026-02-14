@@ -156,30 +156,33 @@ blockquote {
 pre,
 code {
     font-family: $code-font-family;
-    font-size: 14px;
-    border: 1px solid $border-color;
+    font-size: 16px;
     border-radius: 4px;
     background-color: $background-alt;
 }
 
 code {
-    padding: 2px 6px;
+    padding: 3px 8px;
     color: $error-color;
+    border: 1px solid $border-color;
+    font-weight: 500;
 }
 
 pre {
-    padding: $spacing-unit * 0.75;
+    padding: $spacing-unit;
     overflow-x: auto;
     background-color: $grey-color-dark;
     color: #e2e8f0;
-    border-radius: 6px;
-    line-height: 1.4;
+    border-radius: 8px;
+    line-height: 1.5;
+    border: none;
 
     > code {
         border: 0;
         padding: 0;
         color: inherit;
         background-color: transparent;
+        font-weight: 400;
     }
 }
 
