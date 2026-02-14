@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "CodePrep Labs"
+title:  "codeprep labs"
 date:   2020-07-14 17:48:44 +0530
 categories: project
-featured_image: "/images/spring/springsecurity.png"
+featured_image: "/images/codepreplabs.png"
 ---
 
 CodePrep Labs is a collection of code examples and tutorials designed to help developers learn new concepts through practical, hands-on examples. It's a GitHub organization with 35+ repositories covering various Java technologies and frameworks.
