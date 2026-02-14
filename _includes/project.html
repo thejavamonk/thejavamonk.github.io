@@ -10,7 +10,14 @@
         </div>
         <div class="project-content">
             <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-excerpt">{{ project.content | strip_html | truncate: 120 }}</p>
+            {% assign project_text = project.content | strip_html | strip %}
+            {% assign project_parts = project_text | split: "\n\n" %}
+            {% if project_parts.size > 1 and project_parts[0].size < 80 %}
+              {% assign project_excerpt = project_parts[1] %}
+            {% else %}
+              {% assign project_excerpt = project_parts[0] %}
+            {% endif %}
+            <p class="project-excerpt">{{ project_excerpt | strip_newlines | strip | truncate: 160 }}</p>
             <div class="project-meta">
                 <span class="project-date">{{ project.date | date: "%Y" }}</span>
             </div>
