@@ -6,7 +6,9 @@ permalink: /about/
 
 Hi, I’m Praveen.
 
-I’m a self-taught software developer with over 12 years of experience building web-based, client-server, and distributed applications. Currently, I work as a Senior Technical Lead at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/), where I design and develop scalable backend systems and modern web solutions.
+I'm a software developer with over 13+ years of experience building web-based, client-server, and distributed applications. I hold a Master's degree in Data Science and Machine Learning, which complements my practical expertise in building intelligent software systems. 
+
+Currently, I work as a Senior Technical Lead at [Happiest Minds Technologies Pvt Ltd](http://www.happiestminds.com/), where I design and develop scalable backend systems and modern web solutions.
 
 I specialize in Java and open-source frameworks such as Spring, Micronaut, Netflix DGS (GraphQL), JPA, and Hibernate. On the frontend side, I’m proficient in HTML5, CSS3, JavaScript, Bootstrap, and React, enabling me to deliver full-stack solutions end-to-end.
 
