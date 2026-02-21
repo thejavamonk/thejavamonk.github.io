@@ -122,9 +122,9 @@
 // Single post page styles
 .post-header {
     text-align: left;
-    padding: $spacing-unit * 2 0;
+    padding: $spacing-unit 0;
     border-bottom: 2px solid $border-color;
-    margin-bottom: $spacing-unit * 2;
+    margin-bottom: $spacing-unit;
 
     h1 {
         text-align: left;
