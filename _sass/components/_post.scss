@@ -44,12 +44,17 @@
         }
     }
 
+    > * {
+        margin-top: 0 !important;
+    }
+
     h2 {
         text-align: left;
         margin-top: 0;
         margin-bottom: 2px;
         padding: 0 12px 0 12px;
         font-size: $h3-font-size;
+        line-height: 1.2;
     }
 
     p {
@@ -85,6 +90,7 @@
 .post-tags {
     margin-left: 0;
     margin-top: 0;
+    margin-bottom: 0;
     min-height: 0;
     text-align: left;
     padding: 4px 12px 2px 12px;
@@ -172,7 +178,7 @@
 
     .post h2 {
         font-size: $h4-font-size;
-        padding: $spacing-unit / 1.5 $spacing-unit 0 $spacing-unit;
+        padding: 0 $spacing-unit 0 $spacing-unit;
     }
 
     .post-body {
@@ -192,7 +198,7 @@
 
     .post h2 {
         font-size: $h4-font-size;
-        padding: $spacing-unit / 1.5;
+        padding: 0 $spacing-unit / 1.5;
     }
 
     .post p {
