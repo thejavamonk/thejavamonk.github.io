@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "Improving mathematical reasoning in LLMs using RAG"
+date:   2024-02-12 17:48:44 +0530
+categories: project
+featured_image: "/images/rag.png"
+---
+
+A research paper studying how Retrieval Augmented Generation (RAG) can enhance the mathematical reasoning capabilities of Large Language Models. This work was published as a conference paper — *"A Study on Improving Mathematical Reasoning using Retrieval Augmented Generation"*.
+
+### Abstract
+
+Interactive question-answering with human tutors is a proven method for teaching maths. Large language models (LLMs) have the potential to automate parts of this process, but they are limited by problems such as hallucination, outdated knowledge, knowledge gaps, and insufficient training data. To address this, retrieval-augmented generation (RAG) enhances LLM responses by incorporating verified external knowledge into the model's prompts. In this paper, we designed experiments on mathematical reasoning using GPT 3.5 on the GSM8K dataset. We evaluate the efficacy of naive and advanced RAG systems implemented using LlamaIndex and demonstrate that both naive RAG and advanced RAG using HyDE can improve response accuracy and reduce hallucinations.
+
+### Background — RAG Paradigms
+
+RAG can be classified into three paradigms:
+
+- **Naive RAG** — The foundational approach involving three steps: *Indexing* (processing and vectorizing data), *Retrieval* (finding similar relevant chunks via ranking or similarity), and *Generation* (feeding retrieved context + query to the LLM).
+- **Advanced RAG** — Builds on Naive RAG by improving retrieval precision/recall (query expansion, iterative retrieval, sentence-window retrieval) and generation quality (attention mechanisms, data filtering, re-ranking).
+- **Modular RAG** — The most flexible iteration, breaking the RAG process into independent, interchangeable modules (search interfaces, memory modules, fusion of retrieval results) for maximum scalability and adaptability.
+
+### Key Retrieval Techniques
+
+- **Chunking Strategy** — Splitting documents into fixed-token chunks with trade-offs between context and noise. Advanced methods use recursive splitting or sliding windows, enriched with metadata (page number, author, timestamps) for filtered search.
+- **Indexing Optimization** — Structural indexes, hierarchical index structures (tree-like organization with parent summaries), and knowledge graph indexes for capturing relationships between concepts.
+- **Query Optimization** — Multi-query expansion, sub-query planning (least-to-most prompting), Chain-of-Verification (CoVe) for validating expanded queries, and query transformation (e.g., HyDE).
+- **Embedding Models** — Sparse encoders (BM25) for keyword matching and dense retrievers (BERT-based) for semantic understanding.
+
+### Augmentation Strategies
+
+- **Iterative Retrieval** — Repeatedly querying the knowledge base using initial query + generated text to build comprehensive understanding.
+- **Recursive Retrieval** — Refining search queries based on previously retrieved information (e.g., IRCoT using chain-of-thought).
+- **Adaptive Retrieval** — LLMs actively decide when and what to retrieve (e.g., Flare, Self-RAG).
+
+### Generation Improvements
+
+- **Context Curation** — Filtering redundant information and summarizing passages to avoid the "Lost in the Middle" problem.
+- **Re-ranking** — Reordering retrieved chunks by relevance using rule-based (MRR, diversity) or model-based (SpanBERT, Cohere Rerank, GPT) methods.
+- **Context Compression** — Using small language models (GPT-2 Small, LLaMA-7B) to remove unimportant details from retrieved content.
+
+### RAG Evaluation Framework
+
+Evaluation relies on three quality scores and four critical abilities:
+
+**Quality Scores:**
+- **Context Relevance** — How well retrieved information aligns with the user's query.
+- **Answer Faithfulness** — How closely generated answers adhere to the retrieved information.
+- **Answer Relevance** — Whether generated answers directly address the user's question.
+
+**Critical Abilities:**
+- **Noise Robustness** — Handling noisy documents related to the query but lacking substance.
+- **Negative Rejection** — Recognizing when retrieved documents cannot answer the question.
+- **Information Integration** — Synthesizing information from multiple documents.
+- **Counterfactual Robustness** — Disregarding known inaccuracies within documents.
+
+Evaluation tools include benchmarks (RGB, RECALL, CRUD) and automated tools powered by LLMs (RAGAS, ARES, TruLens).
+
+### Dataset & Model
+
+- **GSM8K Dataset** — 8,792 human-written elementary school math word problems (7,473 training / 1,319 test), each requiring 2–8 steps using basic arithmetic. Solutions are in plain language rather than mathematical expressions. ([GitHub](https://github.com/openai/grade-school-math))
+- **Model** — GPT-3.5-Turbo accessed via OpenAI's API and LlamaIndex.
+
+### Experiments & Results
+
+| Experiment | Description | Accuracy |
+|---|---|---|
+| **Baseline** | GPT 3.5 prompted once per question, single answer | **69%** |
+| **Multi Attempt** | GPT 3.5 prompted once, multiple answers accepted | **92%** |
+| **Few-Shot Prompting** | 5 training examples as hints in prompt | **84%** |
+| **Naive RAG** | ChromaDB index on train set, top-3 docs in prompt (train) | **96%** |
+| **Naive RAG** | Same setup evaluated on test set | **76%** |
+| **Naive RAG (no top match)** | Removed highest-match doc, used remaining 2 | **83%** |
+| **Advanced RAG (HyDE)** | Query transformation via HyDE + ChromaDB top-3 | **99%** |
+
+### RAGAS Evaluation (Experiment 6)
+
+Naive RAG evaluated on 2,500 training questions using RAGAS:
+
+| Metric | Value |
+|---|---|
+| Faithfulness | 31.7% |
+| Answer Relevancy | 79.2% |
+| Context Recall | 84.16% |
+| Context Precision | 91.88% |
+| Harmfulness | 0.5% |
+| Answer Similarity | 89.10% |
+
+### Key Findings
+
+- **RAG significantly improves mathematical reasoning** — Naive RAG boosted accuracy from 69% to 96% on the training set.
+- **Advanced RAG (HyDE) achieves near-perfect accuracy** — 99% on the training set by transforming queries for better document matching.
+- **Retrieved context provides direct hints** — The performance improvement is largely attributed to relevant hints present in the retrieved context.
+- **Test vs. train gap** — The 76% test accuracy (vs. 96% train) highlights the importance of the vector database containing relevant data.
+- **Removing the top match hurts performance** — Dropping the best-matching document reduced accuracy from 96% to 83%, confirming the value of precise retrieval.
+
+### Paper
+
+You can read the full conference paper here: [A Study on Improving Mathematical Reasoning using Retrieval Augmented Generation (PDF)](/resources/papers/math-reasoning-rag.pdf)
+
