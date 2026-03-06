@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "thejavamonk.github.io"
+title:  "Blog using Jekyll"
 date:   2016-02-21 17:48:44 +0530
 categories: project
 featured_image: "/images/jekyll.png"
