@@ -1,6 +1,9 @@
+@use "sass:math";
+@use "tokens" as *;
+
 .site-nav {
     text-align: center;
-    padding: $spacing-unit / 2 0;
+    padding: math.div($spacing-unit, 2) 0;
     
     ul {
         margin: 0;
@@ -53,14 +56,14 @@
 }
 
 .site-header {
-    padding: $spacing-unit 0 $spacing-unit / 2;
+    padding: $spacing-unit 0 math.div($spacing-unit, 2);
     border-bottom: 1px solid $border-color;
     background: linear-gradient(135deg, rgba(49, 130, 206, 0.03) 0%, rgba(141, 98, 195, 0.03) 100%);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .site-footer {
-    padding: $spacing-unit / 2 0;
+    padding: math.div($spacing-unit, 2) 0;
     color: $text-color;
     background: $background-alt;
     margin-top: $spacing-unit;
@@ -77,11 +80,11 @@
         text-align: left;
         color: $text-color;
         font-weight: 600;
-        margin-bottom: $spacing-unit / 4;
+        margin-bottom: math.div($spacing-unit, 4);
     }
     
     p {
-        margin-bottom: $spacing-unit / 4;
+        margin-bottom: math.div($spacing-unit, 4);
         color: $text-light;
     }
 }
@@ -94,7 +97,7 @@
     h3 {
         color: $text-color;
         font-weight: 600;
-        margin-bottom: $spacing-unit / 4;
+        margin-bottom: math.div($spacing-unit, 4);
     }
     
     li {
@@ -123,8 +126,13 @@
 }
 
 .site-section {
-    @extend %clearfix;
-    padding-top: $spacing-unit / 2;
+    padding-top: math.div($spacing-unit, 2);
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 .site-section-last {
@@ -137,7 +145,7 @@
         padding-top: $spacing-unit;
         
         &:first-child {
-            padding-top: $spacing-unit / 2;
+            padding-top: math.div($spacing-unit, 2);
         }
     }
     
@@ -147,7 +155,7 @@
         font-weight: 700;
         color: $text-color;
         margin-bottom: $spacing-unit;
-        padding-bottom: $spacing-unit / 2;
+        padding-bottom: math.div($spacing-unit, 2);
         border-bottom: 3px solid $brand-color;
         display: inline-block;
         letter-spacing: -0.5px;
@@ -165,7 +173,7 @@
 
 .project-caption {
     display: block;
-    padding-top: $spacing-unit / 2;
+    padding-top: math.div($spacing-unit, 2);
     font-weight: 600;
     color: $text-color;
     letter-spacing: -0.3px;
@@ -222,7 +230,7 @@
 // Responsive Design
 @include media-query($on-laptop) {
     .site-header {
-        padding: $spacing-unit 0 $spacing-unit / 1.5;
+        padding: $spacing-unit 0 math.div($spacing-unit, 1.5);
     }
 
     .site-title a {
@@ -231,11 +239,11 @@
 
     .site-nav li {
         font-size: 0.95em;
-        margin: 0 $spacing-unit / 2;
+        margin: 0 math.div($spacing-unit, 2);
     }
 
     .site-footer {
-        padding: $spacing-unit / 2 0;
+        padding: math.div($spacing-unit, 2) 0;
     }
 
     .footer-content {
@@ -259,25 +267,25 @@
     }
 
     .site-nav {
-        padding: $spacing-unit / 3 0;
+        padding: math.div($spacing-unit, 3) 0;
     }
 
     .site-nav ul {
-        gap: $spacing-unit / 2;
+        gap: math.div($spacing-unit, 2);
         flex-wrap: wrap;
     }
 
     .site-nav li {
         font-size: 0.9em;
-        margin: 0 $spacing-unit / 3;
+        margin: 0 math.div($spacing-unit, 3);
     }
 
     .site-section {
-        padding-top: $spacing-unit / 3;
+        padding-top: math.div($spacing-unit, 3);
     }
 
     .site-section-last {
-        padding-bottom: $spacing-unit / 3;
+        padding-bottom: math.div($spacing-unit, 3);
     }
 
     .site-footer {
@@ -288,12 +296,12 @@
     .footer-content {
         float: none;
         width: 100%;
-        margin-bottom: $spacing-unit / 2;
+        margin-bottom: math.div($spacing-unit, 2);
         font-size: 0.9em;
 
         h3 {
             font-size: 1.1em;
-            margin-bottom: $spacing-unit / 3;
+            margin-bottom: math.div($spacing-unit, 3);
         }
     }
 
@@ -304,11 +312,11 @@
 
         h3 {
             font-size: 1.1em;
-            margin-bottom: $spacing-unit / 3;
+            margin-bottom: math.div($spacing-unit, 3);
         }
 
         li {
-            margin: 0 $spacing-unit / 2 0 0;
+            margin: 0 math.div($spacing-unit, 2) 0 0;
         }
     }
 }

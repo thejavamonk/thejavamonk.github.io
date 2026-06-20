@@ -1,10 +1,18 @@
+@use "sass:math";
+@use "../tokens" as *;
+
 .post-list {
-    @extend %clearfix;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
     padding: 0;
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 .post-list-home {
@@ -139,7 +147,7 @@
 }
 
 .post-title {
-    margin: 0 0 $spacing-unit / 2 0;
+    margin: 0 0 math.div($spacing-unit, 2) 0;
     text-align: left;
 }
 
@@ -165,7 +173,7 @@
 
     p, ul, ol {
         line-height: 1.8;
-        margin-bottom: $spacing-unit / 1.5;
+        margin-bottom: math.div($spacing-unit, 1.5);
     }
 }
 
@@ -182,7 +190,7 @@
     }
 
     .post-body {
-        padding: 0 $spacing-unit / 2;
+        padding: 0 math.div($spacing-unit, 2);
     }
 }
 
@@ -198,34 +206,34 @@
 
     .post h2 {
         font-size: $h4-font-size;
-        padding: 0 $spacing-unit / 1.5;
+        padding: 0 math.div($spacing-unit, 1.5);
     }
 
     .post p {
-        padding: 0 $spacing-unit / 1.5;
+        padding: 0 math.div($spacing-unit, 1.5);
         font-size: 0.95em;
     }
 
     .post-read-more-link {
-        padding: $spacing-unit / 2 $spacing-unit / 1.5 $spacing-unit / 1.5;
+        padding: math.div($spacing-unit, 2) math.div($spacing-unit, 1.5) math.div($spacing-unit, 1.5);
     }
 
     .post-tags {
-        padding: $spacing-unit / 3 $spacing-unit / 1.5 0;
-        gap: $spacing-unit / 4;
+        padding: math.div($spacing-unit, 3) math.div($spacing-unit, 1.5) 0;
+        gap: math.div($spacing-unit, 4);
     }
 
     .post-meta-info {
-        padding: 0 $spacing-unit / 1.5;
+        padding: 0 math.div($spacing-unit, 1.5);
         font-size: 0.85em;
-        gap: $spacing-unit / 4;
+        gap: math.div($spacing-unit, 4);
     }
 
     .post-body {
-        padding: 0 $spacing-unit / 2;
+        padding: 0 math.div($spacing-unit, 2);
     }
 
     .post-body h1, .post-body h2, .post-body h3, .post-body h4 {
-        margin: $spacing-unit 0 $spacing-unit / 2 0;
+        margin: $spacing-unit 0 math.div($spacing-unit, 2) 0;
     }
 }
