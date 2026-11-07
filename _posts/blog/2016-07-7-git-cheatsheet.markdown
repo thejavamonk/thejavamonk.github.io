@@ -22,17 +22,6 @@ git config --list
 git config user.name
 {% endhighlight %}
 
-**Set default editor**
-{% highlight unix %}
-git config --global core.editor "code --wait"  # VS Code
-git config --global core.editor "vim"          # Vim
-{% endhighlight %}
-
-**Set default branch name**
-{% highlight unix %}
-git config --global init.defaultBranch main
-{% endhighlight %}
-
 ## Repository Setup
 
 **Initialize a new repository**
@@ -61,7 +50,6 @@ git status -s  # Short format
 git add filename.txt
 git add .                    # Add all files
 git add *.js                 # Add all JS files
-git add -A                   # Add all changes
 git add -p                   # Interactive staging
 {% endhighlight %}
 
@@ -149,8 +137,6 @@ git push origin branch-name
 git push -u origin branch-name   # Set upstream
 git push --all                   # Push all branches
 git push --tags                  # Push tags
-git push --force                 # Force push (dangerous!)
-git push --force-with-lease      # Safer force push
 {% endhighlight %}
 
 **Pull from remote and override local changes**
@@ -168,8 +154,6 @@ git stash save "message"     # Stash with message
 git stash -u                 # Include untracked files
 git stash list               # List all stashes
 git stash show               # Show latest stash
-git stash show -p            # Show latest stash with diff
-git stash show -p stash@{1}  # Show specific stash
 {% endhighlight %}
 
 **Apply and remove stashes**
